@@ -1,3 +1,6 @@
+# Fork Information
+This fork was created to add support for windows compiling
+
 # ConvPoint: Generalizing discrete convolutions for unstructured point clouds
 
 
