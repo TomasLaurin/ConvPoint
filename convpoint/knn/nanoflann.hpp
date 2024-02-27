@@ -56,6 +56,10 @@
 #include <cstdlib> // for abs()
 #include <limits>
 
+#if !defined(M_PI)
+# define M_PI 3.14159265358979323846264338327950288
+#endif
+
 // Avoid conflicting declaration of min/max macros in windows headers
 #if !defined(NOMINMAX) && (defined(_WIN32) || defined(_WIN32_)  || defined(WIN32) || defined(_WIN64))
 # define NOMINMAX
