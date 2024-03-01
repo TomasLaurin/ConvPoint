@@ -72,15 +72,17 @@ class PtConv(LayerBase):
 
         # compute indices for indexing points
         add_indices = torch.arange(batch_size).type(indices.type()) * n_pts
-        indices = indices + add_indices.view(-1,1,1)
+        indices = indices + add_indices.view(-1, 1, 1)
 
         # get the features and point cooridnates associated with the indices
         features = input.view(-1, input.size(2))[indices]
-        pts = points.view(-1, points.size(2))[indices]
+        pts = points.view(-1, points.size(2))
+        pts = pts[indices]
 
 
+        tmp = next_pts.unsqueeze(2)
         # center the neighborhoods
-        pts = pts - next_pts.unsqueeze(2)
+        pts = pts - tmp
 
         # normalize to unit ball, or not
         if normalize:

@@ -1,5 +1,5 @@
 .ipynb
+.idea
 __pycache__
-.vscode
 build
 lib
