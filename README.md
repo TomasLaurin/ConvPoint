@@ -1,7 +1,5 @@
-This is a small part of windows fork of ConvPoint 
-
-Windows compilation Fork: https://github.com/TomasLaurin/ConvPoint
-The original repository: https://github.com/aboulch/ConvPoint/
+# Fork Information
+This fork was created for compilation with windows. The Cython setup code was added with optional windows specific parameters.  
 
 
 # ConvPoint: Generalizing discrete convolutions for unstructured point clouds
